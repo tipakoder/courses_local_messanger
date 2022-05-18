@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        #message-list {
+            display: flex;
+            flex-direction: column;
+        }
+
+        #message-list p.self {
+            text-align: right;
+            background-color: #ccc;
+        }
+
+        #message-list p {
+            padding: 8px;
+            background-color: #eee;
+            border-radius: 8px;
+        }
+    </style>
+</head>
+<body>
+    <div id="message-list"></div>
+    <input type="text" id="message-name" placeholder="name" value="kolya">
+    <form id="input-form">
+        <input type="text" id="message-text" placeholder="message text">
+        <input type="file" id="message-file">
+        <button>send</button>
+    </form>
+
+    <script src="../js/socket.io-client.js"></script>
+    <script src="../js/main.js"></script>
+</body>
+</html>
